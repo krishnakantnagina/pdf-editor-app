@@ -61,6 +61,8 @@ Every pull request builds a debug APK automatically. You can download it from th
 4. Commit with a clear message, e.g. `Fix stamp position on rotated pages`.
 5. Open a pull request and fill in the template. Add screenshots for UI changes.
 
+When a release bumps `version` in `package.json`, update `APP_VERSION` at the top of `js/app.js` too, so the About sheet shows the right number.
+
 If you add a file that the app loads, also add it to the `CORE` list in `sw.js` and bump `VERSION` there, so the offline cache picks it up.
 
 ## Reporting bugs

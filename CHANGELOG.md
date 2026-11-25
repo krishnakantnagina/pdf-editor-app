@@ -2,6 +2,11 @@
 
 All notable changes to this project are listed here. This project follows [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+- The About sheet (Menu → About) now shows the app version, so bug reports can say which version they came from.
+
 ## [1.0.0] - 2026-11-25
 
 First public release.

@@ -6,6 +6,9 @@ import { icon } from './icons.js';
 
 const { PDFDocument } = window.PDFLib;
 
+// Keep in sync with "version" in package.json on each release.
+const APP_VERSION = '1.0.0';
+
 // ============================================================ helpers
 const $ = (s, el = document) => el.querySelector(s);
 function h(tag, attrs = {}, ...kids) {
@@ -1585,7 +1588,8 @@ function openMenu() {
       !installPrompt && ios && item('Install on iPhone: tap Share → "Add to Home Screen"', () => {}),
       item('About', () => openSheet({
         title: 'About PDF Editor',
-        body: [h('p', { class: 'note' }, 'Everything happens on your device: your PDFs are never uploaded. Works offline after the first visit.'),
+        body: [h('p', { class: 'note' }, `Version ${APP_VERSION}`),
+          h('p', { class: 'note' }, 'Everything happens on your device: your PDFs are never uploaded. Works offline after the first visit.'),
           h('p', { class: 'note' }, 'Built with pdf.js (Mozilla) and pdf-lib.')],
         buttons: [{ label: 'Close', cls: 'primary', onClick: (c) => c() }],
       })),
