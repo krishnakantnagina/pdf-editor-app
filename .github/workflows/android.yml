@@ -66,7 +66,7 @@ jobs:
           cd android && chmod +x gradlew && ./gradlew --no-daemon assembleDebug
           cp app/build/outputs/apk/debug/app-debug.apk "$GITHUB_WORKSPACE/PDF-Editor-${VERSION_NAME}-debug.apk"
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: PDF-Editor-apk
           path: PDF-Editor-*.apk
